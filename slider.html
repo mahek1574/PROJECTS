@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Image Slider</title>  
+  <style>  
+    * {  
+      margin: 0;  
+      padding: 0;  
+      box-sizing: border-box;  
+      list-style: none;  
+      text-decoration: none;  
+    }  
+
+    body {  
+    
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+      background-color: #facbcb8a;
+      font-family: Arial, sans-serif;  
+    }  
+
+    .slider {  
+      
+      width: 50%;  
+      text-align: center;  
+      padding: 25px;  
+      line-height: 28px;  
+      background-color: #fcc3c369;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.377);  
+      border-radius: 10px;
+      position: relative; 
+    }  
+
+    .img img {  
+      max-width: 100%; 
+      height: auto;  
+      margin-top: 15px; 
+      border-radius: 10px; 
+    }  
+
+    h2 {  
+      font-size: 24px;  
+      color: #494343; 
+      margin: 10px 0;
+    }  
+
+    p {  
+      font-size: 16px;  
+      color: #555;
+      margin: 10px 0; 
+    }  
+
+    #prevBtn, #nextBtn {  
+      padding: 15px 15px;  
+      background-color: #121313a9;
+      border: none;  
+      color: white; 
+
+      cursor: pointer; 
+      border-radius: 10px; 
+      position: absolute;
+      top: 50%;  
+      transform: translateY(-50%);
+    }  
+
+    #prevBtn {  
+      left: 40px; 
+    }  
+
+    #nextBtn {  
+      right: 40px;  
+    }  
+
+    #prevBtn:hover, #nextBtn:hover {  
+      background-color: #5d748b;
+    }  
+  </style>  
+</head>  
+
+<body>  
+  <div class="slider">  
+    <button id="prevBtn">&#8592;</button>  
+    <div class="img">  
+      <img src="" alt="" id="img"/>  
+    </div>  
+    <h2 id="head"></h2>  
+    <p id="desc"></p>  
+    <button id="nextBtn">&#8594;</button>  
+  </div>  
+
+  <script src="slider.js"></script>  
+</body>  
+</html>  
