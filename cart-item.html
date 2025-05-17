@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Demo</title>
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+#cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+
+#product_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+
+#product_list div {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 220px;
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+#product_list div:hover {
+  transform: scale(1.02);
+}
+
+
+#product_list div img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+#product_list div button {
+  padding: 8px 12px;
+  background-color: #3e5164;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.2s;
+}
+
+#product_list div button:hover {
+  background-color: #0057b3c0;
+}
+
+
+#cart-container {
+  position: fixed;
+  top: 100px;
+  right: -350px; 
+  width: 350px;
+  height: calc(100% - 100px);
+  background-color: #4b4f53;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  border-radius: 8px 0 0 8px;
+}
+
+#cart-container h2 {
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+#product_show {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#product_show img{
+width: 100px;
+}
+
+#product_show li {
+  background: #595e63;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+
+#price_show {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffffee;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <h1>My Shop</h1>
+    <div id="cart-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" width="30" alt="Cart Icon" />
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+
+  <div id="product_list"></div>
+
+
+  <div id="cart-container">
+    <h2>Your Cart</h2>
+    <ul id="product_show"></ul>
+    <div id="price_show"></div>
+  </div>
+  </body>
+  </html>
+  <script src="cart-item.js"></script>
+ 
